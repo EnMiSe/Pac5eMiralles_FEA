@@ -1,0 +1,24 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .card {
+    flex: 1 1 calc(33% - 32px);
+    box-sizing: border-box;
+  }
+  
+  .spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .view-toggle {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+  }
+  

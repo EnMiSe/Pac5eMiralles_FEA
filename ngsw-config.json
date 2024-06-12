@@ -1,5 +1,4 @@
 {
-  "$schema": "./node_modules/@angular/service-worker/config/schema.json",
   "index": "/index.html",
   "assetGroups": [
     {
@@ -9,12 +8,8 @@
         "files": [
           "/favicon.ico",
           "/index.html",
-          "/manifest.webmanifest",
           "/*.css",
           "/*.js"
-        ],
-        "urls": [
-          "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
         ]
       }
     },
@@ -25,7 +20,7 @@
       "resources": {
         "files": [
           "/assets/**",
-          "/*.(svg|cur|jpg|jpeg|png|apng|webp|avif|gif|otf|ttf|woff|woff2)"
+          "/*.(png|jpg)"
         ]
       }
     }
@@ -34,7 +29,7 @@
     {
       "name": "images-api",
       "urls": [
-        "https://picsum.photos/**"
+        "https://picsum.photos/v2/list"
       ],
       "cacheConfig": {
         "maxSize": 10,

@@ -9,14 +9,24 @@ import { ImagesService } from 'src/app/services/images.service';
 })
 export class ImagesComponent implements OnInit {
   images: Image[] = [];
+  displayedColumns: string[] = ['id', 'author', 'actions'];
+  loading = true;
+  isGridView = true;
 
   constructor(private imagesService: ImagesService) {}
 
   ngOnInit(): void {
-    this.imagesService
-      .getAllImages()
-      .subscribe((images) => this.images = images);
+    this.imagesService.getAllImages().subscribe((data) => {
+      this.images = data;
+      this.loading = false;
+    });
+  }
+
+  toggleView(): void {
+    this.isGridView = !this.isGridView;
   }
 }
+
+
 
 
